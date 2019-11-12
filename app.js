@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const port = 3000
 const generateRubbish = require('./generate_rubbish')
 
+
 //set template engine
 app.engine('handlebars', exphbs({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
@@ -32,7 +33,6 @@ app.post('/',(req, res) =>{
 
     //generateRubbish
     const rubbish = generateRubbish(Career)
-    console.log(rubbish)
     res.render('index',{rubbish: rubbish, engineer:engineer,designer:designer,entrepreneur:entrepreneur})
 })
 
