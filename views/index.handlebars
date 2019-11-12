@@ -1,0 +1,40 @@
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">Rubbish Generator</span>
+    </nav>
+
+    <form method="POST" action="/">
+      <h2 class="text-center">Rubbish Generator</h2>
+
+      <div class="option_position row mt-5">
+          <div class="option col w-33">
+              <label class="d-block mx-auto" for="engineer">
+                  <img src="/image/engineer.jpg" alt="engineer photo" width="350px" height="250px">
+              </label>
+
+              <input class="d-block mx-auto" type="radio" name="career" id="engineer" value="engineer" checked>
+          </div>
+          <div class="option col w-33">
+              <label class="d-block mx-auto" for="designer">
+                  <img src="/image/designer.jpg" alt="designer photo" width="350px" height="250px">
+              </label>
+              <input class="d-block mx-auto" type="radio" name="career" id="designer" value="designer" {{#if designer }}checked{{/if}}>
+          </div>
+          <div class="option col w-33">
+              <label class="d-block mx-auto" for="entrepreneur">
+                  <img src="/image/entrepreneurs.jpg" alt="entrepreneur photo" width="350px" height="250px">
+              </label>
+              <input class="d-block mx-auto" type="radio" name="career" id="entrepreneur" value="entrepreneur" {{#if entrepreneur }}checked{{/if}}>
+          </div>
+      </div>
+
+      <div class="generate mt-5 row">
+          <div class="col-2 text-right">
+            <button class="btn btn-success" type="submit">產生幹話</button>
+          </div>
+          <div class="col-10">
+            <textarea name="rubbish" id="Rubbish" cols="130" rows="3">{{rubbish}}</textarea>
+          </div>
+      </div>
+    </form>
+</div>
